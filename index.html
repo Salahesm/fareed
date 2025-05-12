@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FindYourStay - Housing Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
+      animation: fadeIn 1.2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      color: white;
+      padding: 6em 2em;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+      animation: slideDown 1s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a237e;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1em;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    nav a:hover {
+      background-color: #0d133d;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 3em 1.5em;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .interactive {
+      background-color: #f9f9f9;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .location-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1em;
+    }
+    .location-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .location-title {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+    .blog-post, .faq-item, .social-media, .location {
+      margin-bottom: 2em;
+    }
+    button {
+      background-color: #1a237e;
+      color: white;
+      border: none;
+      padding: 0.8em 1.6em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #0d133d;
+      transform: scale(1.05);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+    input:focus, textarea:focus {
+      border-color: #1a237e;
+      outline: none;
+    }
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+      animation: fadeIn 1s ease-in;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FindYourStay</h1>
+    <p>Your Gateway to Affordable and Comfortable Housing</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#locations">Locations</a>
+    <a href="#faq">FAQ</a>
+    <a href="#blog">Blog</a>
+    <a href="#reservation">Reservation</a>
+    <a href="#social">Social</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Your Next Home</h2>
+    <div class="interactive">
+      <p>Whether you're traveling, relocating, or studying, FindYourStay offers handpicked housing options in top cities. Explore stunning homes, furnished apartments, and cozy stays, all at your fingertips.</p>
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1000&q=80" alt="home interior" style="width:100%;border-radius:10px;margin-top:1em;">
+    </div>
+  </section>
+
+  <section id="locations">
+    <h2>Popular Locations</h2>
+    <div class="interactive">
+      <div class="location-gallery">
+        <div>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Florida">
+          <div class="location-title">Florida</div>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1508051123996-69f8caf4891e?auto=format&fit=crop&w=800&q=80" alt="Washington">
+          <div class="location-title">Washington</div>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1549921296-3a2b3bd264e9?auto=format&fit=crop&w=800&q=80" alt="New York">
+          <div class="location-title">New York</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="interactive">
+      <div class="faq-item">
+        <strong>What amenities do you offer?</strong>
+        <p>All our properties include Wi-Fi, utilities, and flexible lease options. Many also feature gyms, pools, and concierge services.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Can I extend my stay?</strong>
+        <p>Yes! Most properties support flexible booking extensions based on availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Latest Blog Posts</h2>
+    <div class="interactive">
+      <div class="blog-post">
+        <h3>How to Prepare for a Short-Term Move</h3>
+        <p>Get practical tips on what to pack and how to adapt quickly to your new environment.</p>
+      </div>
+      <div class="blog-post">
+        <h3>The Best Cities for Remote Work</h3>
+        <p>Explore the most popular cities in the U.S. for digital nomads and remote workers in 2025.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservation">
+    <h2>Book Your Stay</h2>
+    <div class="interactive">
+      <form onsubmit="alert('Your reservation has been submitted!'); return false;">
+        <label>Name:</label>
+        <input type="text" required>
+        <label>Email:</label>
+        <input type="email" required>
+        <label>Location:</label>
+        <input type="text" placeholder="e.g., Miami, FL" required>
+        <label>Dates:</label>
+        <input type="text" placeholder="MM/DD/YYYY - MM/DD/YYYY" required>
+        <label>Comments:</label>
+        <textarea rows="4"></textarea>
+        <button type="submit">Reserve</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="social">
+    <h2>Stay Connected</h2>
+    <div class="interactive">
+      <div class="social-media">Instagram: <a href="#">@FindYourStay</a></div>
+      <div class="social-media">Facebook: <a href="#">FindYourStay Housing</a></div>
+      <div class="social-media">X: <a href="#">@StayFind</a></div>
+      <div class="social-media">LinkedIn: <a href="#">FindYourStay Inc.</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FindYourStay. All rights reserved.</p>
+  </footer>
+</body>
+</html>
