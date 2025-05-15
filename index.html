@@ -3,231 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FindYourStay - Housing Platform</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <title>StayCQU Community</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff;
-      color: #333;
-      animation: fadeIn 1.2s ease-in;
+    html {
+      scroll-behavior: smooth;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; } to { opacity: 1; }
-    }
-    header {
-      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-      color: white;
-      padding: 6em 2em;
-      text-align: center;
-      position: relative;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-      animation: slideDown 1s ease-out;
-    }
-    @keyframes slideDown {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1a237e;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      padding: 1em;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.2s;
-    }
-    nav a:hover {
-      background-color: #0d133d;
-      transform: scale(1.05);
-    }
-    section {
-      padding: 3em 1.5em;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .interactive {
-      background-color: #f9f9f9;
-      padding: 2em;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      animation: fadeInUp 1s ease-in-out;
-    }
-    @keyframes fadeInUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .location-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1em;
-    }
-    .location-gallery img {
-      width: 100%;
-      border-radius: 8px;
-      height: 180px;
-      object-fit: cover;
-    }
-    .location-title {
-      text-align: center;
-      font-weight: bold;
-      margin-top: 0.5em;
-    }
-    .blog-post, .faq-item, .social-media, .location {
-      margin-bottom: 2em;
-    }
-    button {
-      background-color: #1a237e;
-      color: white;
-      border: none;
-      padding: 0.8em 1.6em;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
-    button:hover {
-      background-color: #0d133d;
-      transform: scale(1.05);
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.7em;
-      margin: 0.5em 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      transition: border-color 0.3s;
-    }
-    input:focus, textarea:focus {
-      border-color: #1a237e;
-      outline: none;
-    }
-    footer {
-      background-color: #1a237e;
-      color: white;
-      text-align: center;
-      padding: 2em 1em;
-      animation: fadeIn 1s ease-in;
+    .parallax {
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>FindYourStay</h1>
-    <p>Your Gateway to Affordable and Comfortable Housing</p>
+<body class="text-gray-800 bg-white">
+
+  <!-- Navigation Bar -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">StayCQU+</h1>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#programs" class="hover:text-indigo-600">Programs</a>
+        <a href="#gallery" class="hover:text-indigo-600">Gallery</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#locations">Locations</a>
-    <a href="#faq">FAQ</a>
-    <a href="#blog">Blog</a>
-    <a href="#reservation">Reservation</a>
-    <a href="#social">Social</a>
-  </nav>
-
-  <section id="home">
-    <h2>Welcome to Your Next Home</h2>
-    <div class="interactive">
-      <p>Whether you're traveling, relocating, or studying, FindYourStay offers handpicked housing options in top cities. Explore stunning homes, furnished apartments, and cozy stays, all at your fingertips.</p>
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1000&q=80" alt="home interior" style="width:100%;border-radius:10px;margin-top:1em;">
+  <!-- Hero Section -->
+  <section class="parallax h-screen flex items-center justify-center text-white text-center">
+    <div class="bg-black bg-opacity-60 p-10 rounded-lg">
+      <h2 class="text-4xl font-bold mb-4">Welcome to StayCQU+</h2>
+      <p class="mb-6 text-lg">Empowering students, celebrating diversity, and building a vibrant community.</p>
+      <a href="#about" class="bg-indigo-500 hover:bg-indigo-700 text-white px-6 py-2 rounded-full">Learn More</a>
     </div>
   </section>
 
-  <section id="locations">
-    <h2>Popular Locations</h2>
-    <div class="interactive">
-      <div class="location-gallery">
-        <div>
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Florida">
-          <div class="location-title">Florida</div>
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-4">About Us</h3>
+      <p class="text-lg text-gray-600">
+        StayCQU+ is a student-centered initiative promoting wellbeing, social connectedness, and campus engagement. We aim to
+        provide meaningful experiences and support through workshops, events, and peer interaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center mb-10">Our Programs</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-md p-6 rounded-lg">
+          <h4 class="text-xl font-semibold mb-2">Wellbeing Sessions</h4>
+          <p class="text-gray-600">Weekly mindfulness, stress-relief, and yoga activities for mental balance.</p>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1508051123996-69f8caf4891e?auto=format&fit=crop&w=800&q=80" alt="Washington">
-          <div class="location-title">Washington</div>
+        <div class="bg-white shadow-md p-6 rounded-lg">
+          <h4 class="text-xl font-semibold mb-2">Creative Workshops</h4>
+          <p class="text-gray-600">Art, writing, and storytelling workshops to explore and express your identity.</p>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1549921296-3a2b3bd264e9?auto=format&fit=crop&w=800&q=80" alt="New York">
-          <div class="location-title">New York</div>
+        <div class="bg-white shadow-md p-6 rounded-lg">
+          <h4 class="text-xl font-semibold mb-2">Cultural Events</h4>
+          <p class="text-gray-600">Multicultural nights, music, food fests, and language sharing experiences.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="faq">
-    <h2>FAQ</h2>
-    <div class="interactive">
-      <div class="faq-item">
-        <strong>What amenities do you offer?</strong>
-        <p>All our properties include Wi-Fi, utilities, and flexible lease options. Many also feature gyms, pools, and concierge services.</p>
-      </div>
-      <div class="faq-item">
-        <strong>Can I extend my stay?</strong>
-        <p>Yes! Most properties support flexible booking extensions based on availability.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="blog">
-    <h2>Latest Blog Posts</h2>
-    <div class="interactive">
-      <div class="blog-post">
-        <h3>How to Prepare for a Short-Term Move</h3>
-        <p>Get practical tips on what to pack and how to adapt quickly to your new environment.</p>
-      </div>
-      <div class="blog-post">
-        <h3>The Best Cities for Remote Work</h3>
-        <p>Explore the most popular cities in the U.S. for digital nomads and remote workers in 2025.</p>
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center mb-10">Gallery</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="https://source.unsplash.com/300x200/?people,smile" class="rounded-lg" />
+        <img src="https://source.unsplash.com/300x200/?campus,event" class="rounded-lg" />
+        <img src="https://source.unsplash.com/300x200/?friends,students" class="rounded-lg" />
+        <img src="https://source.unsplash.com/300x200/?party,culture" class="rounded-lg" />
       </div>
     </div>
   </section>
 
-  <section id="reservation">
-    <h2>Book Your Stay</h2>
-    <div class="interactive">
-      <form onsubmit="alert('Your reservation has been submitted!'); return false;">
-        <label>Name:</label>
-        <input type="text" required>
-        <label>Email:</label>
-        <input type="email" required>
-        <label>Location:</label>
-        <input type="text" placeholder="e.g., Miami, FL" required>
-        <label>Dates:</label>
-        <input type="text" placeholder="MM/DD/YYYY - MM/DD/YYYY" required>
-        <label>Comments:</label>
-        <textarea rows="4"></textarea>
-        <button type="submit">Reserve</button>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="max-w-xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center mb-6">Contact Us</h3>
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="name" type="text" placeholder="Your name">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="email" type="email" placeholder="Your email">
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+          <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="message" rows="4" placeholder="Your message"></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" type="button">
+            Send
+          </button>
+        </div>
       </form>
     </div>
   </section>
 
-  <section id="social">
-    <h2>Stay Connected</h2>
-    <div class="interactive">
-      <div class="social-media">Instagram: <a href="#">@FindYourStay</a></div>
-      <div class="social-media">Facebook: <a href="#">FindYourStay Housing</a></div>
-      <div class="social-media">X: <a href="#">@StayFind</a></div>
-      <div class="social-media">LinkedIn: <a href="#">FindYourStay Inc.</a></div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 FindYourStay. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 StayCQU+. All rights reserved.</p>
   </footer>
 </body>
 </html>
