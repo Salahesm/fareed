@@ -43,6 +43,7 @@
         <h1 class="text-2xl font-bold text-red-700">CORPORATE QUARTERS USA</h1>
       </div>
       <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="#" class="hover:text-red-600">Home</a>
         <div x-data="{ open: false }" class="relative">
           <button @click="open = !open" class="hover:text-red-600">Locations</button>
           <div x-show="open" @click.away="open = false" class="absolute bg-white shadow rounded mt-2 p-2 w-48">
@@ -54,15 +55,7 @@
             <a href="#locations" class="block px-2 py-1 hover:bg-gray-100">Georgia</a>
           </div>
         </div>
-        <div x-data="{ open: false }" class="relative">
-          <button @click="open = !open" class="hover:text-red-600">Housing Options</button>
-          <div x-show="open" @click.away="open = false" class="absolute bg-white shadow rounded mt-2 p-2 w-48">
-            <a href="#housing" class="block px-2 py-1 hover:bg-gray-100">Government</a>
-            <a href="#housing" class="block px-2 py-1 hover:bg-gray-100">Insurance Adjusters</a>
-            <a href="#housing" class="block px-2 py-1 hover:bg-gray-100">Displaced Insured</a>
-            <a href="#housing" class="block px-2 py-1 hover:bg-gray-100">Short Stays</a>
-          </div>
-        </div>
+        <a href="#reservation" class="hover:text-red-600">Reservation</a>
         <a href="#faq" class="hover:text-red-600">FAQs</a>
         <a href="#about" class="hover:text-red-600">About</a>
         <a href="#" class="hover:text-red-600">Blog</a>
@@ -88,6 +81,10 @@
         <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
         <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
         <input type="text" name="location" placeholder="Preferred Location" required class="w-full p-3 border rounded" />
+        <label class="block font-semibold mt-4">Preferred Check-in Date:</label>
+        <input type="date" name="checkin" required class="w-full p-3 border rounded" />
+        <label class="block font-semibold mt-4">Preferred Check-out Date:</label>
+        <input type="date" name="checkout" required class="w-full p-3 border rounded" />
         <textarea name="message" rows="4" placeholder="Additional Details" class="w-full p-3 border rounded"></textarea>
         <input type="hidden" name="_captcha" value="false">
         <button type="submit" class="bg-red-600 text-white font-bold py-2 px-6 rounded hover:bg-red-700">Submit</button>
