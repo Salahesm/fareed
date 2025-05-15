@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StayCQU Community</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Stay Housing</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
     }
     .parallax {
-      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
+      background-image: url('https://source.unsplash.com/1600x900/?city,night');
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -18,104 +18,123 @@
     }
   </style>
 </head>
-<body class="text-gray-800 bg-white">
+<body class="bg-white text-gray-800">
 
-  <!-- Navigation Bar -->
-  <header class="fixed w-full bg-white shadow z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-indigo-600">StayCQU+</h1>
+  <!-- Navbar -->
+  <header class="bg-white shadow fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-700">Global Stay Housing</h1>
       <nav class="space-x-6 text-sm font-semibold">
-        <a href="#about" class="hover:text-indigo-600">About</a>
-        <a href="#programs" class="hover:text-indigo-600">Programs</a>
-        <a href="#gallery" class="hover:text-indigo-600">Gallery</a>
-        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+        <a href="#home" class="hover:text-blue-500">Home</a>
+        <a href="#locations" class="hover:text-blue-500">Locations</a>
+        <a href="#housing" class="hover:text-blue-500">Housing Options</a>
+        <a href="#fema" class="hover:text-blue-500">FEMA</a>
+        <a href="#faq" class="hover:text-blue-500">FAQ</a>
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="parallax h-screen flex items-center justify-center text-white text-center">
-    <div class="bg-black bg-opacity-60 p-10 rounded-lg">
-      <h2 class="text-4xl font-bold mb-4">Welcome to StayCQU+</h2>
-      <p class="mb-6 text-lg">Empowering students, celebrating diversity, and building a vibrant community.</p>
-      <a href="#about" class="bg-indigo-500 hover:bg-indigo-700 text-white px-6 py-2 rounded-full">Learn More</a>
+  <section id="home" class="parallax h-screen flex items-center justify-center text-white text-center">
+    <div class="bg-black bg-opacity-60 p-10 rounded">
+      <h2 class="text-4xl font-bold mb-4">Find Your Temporary Home With Confidence</h2>
+      <p class="mb-6 text-lg">Corporate, government, and emergency housing made easy and comfortable.</p>
+      <a href="#housing" class="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-full text-white font-semibold">Explore Housing Options</a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 bg-gray-50">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-4">About Us</h3>
-      <p class="text-lg text-gray-600">
-        StayCQU+ is a student-centered initiative promoting wellbeing, social connectedness, and campus engagement. We aim to
-        provide meaningful experiences and support through workshops, events, and peer interaction.
-      </p>
+  <!-- Locations -->
+  <section id="locations" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">Our Locations</h3>
+      <p class="mb-8">We provide housing in over 30 states including New York, California, Florida, and Texas.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white p-4 shadow rounded">New York</div>
+        <div class="bg-white p-4 shadow rounded">California</div>
+        <div class="bg-white p-4 shadow rounded">Florida</div>
+        <div class="bg-white p-4 shadow rounded">Texas</div>
+      </div>
     </div>
   </section>
 
-  <!-- Programs Section -->
-  <section id="programs" class="py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-10">Our Programs</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white shadow-md p-6 rounded-lg">
-          <h4 class="text-xl font-semibold mb-2">Wellbeing Sessions</h4>
-          <p class="text-gray-600">Weekly mindfulness, stress-relief, and yoga activities for mental balance.</p>
+  <!-- Housing Options -->
+  <section id="housing" class="py-20">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Housing Options</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-6 shadow rounded">
+          <h4 class="font-semibold mb-2">Government Housing</h4>
+          <p>Flexible and secure options for U.S. government employees.</p>
         </div>
-        <div class="bg-white shadow-md p-6 rounded-lg">
-          <h4 class="text-xl font-semibold mb-2">Creative Workshops</h4>
-          <p class="text-gray-600">Art, writing, and storytelling workshops to explore and express your identity.</p>
+        <div class="bg-white p-6 shadow rounded">
+          <h4 class="font-semibold mb-2">Insurance Adjusters</h4>
+          <p>Reliable housing while servicing claims across the country.</p>
         </div>
-        <div class="bg-white shadow-md p-6 rounded-lg">
-          <h4 class="text-xl font-semibold mb-2">Cultural Events</h4>
-          <p class="text-gray-600">Multicultural nights, music, food fests, and language sharing experiences.</p>
+        <div class="bg-white p-6 shadow rounded">
+          <h4 class="font-semibold mb-2">Displaced Individuals</h4>
+          <p>Safe spaces for those displaced due to disasters or emergencies.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded">
+          <h4 class="font-semibold mb-2">Short-Term Stays</h4>
+          <p>Flexible leases for any duration and lifestyle.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="py-16 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-10">Gallery</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="https://source.unsplash.com/300x200/?people,smile" class="rounded-lg" />
-        <img src="https://source.unsplash.com/300x200/?campus,event" class="rounded-lg" />
-        <img src="https://source.unsplash.com/300x200/?friends,students" class="rounded-lg" />
-        <img src="https://source.unsplash.com/300x200/?party,culture" class="rounded-lg" />
+  <!-- FEMA Section -->
+  <section id="fema" class="py-20 bg-blue-50">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">FEMA FLEXIBLE™</h3>
+      <p class="mb-6">Our housing meets FEMA requirements for fast, compliant placement in crisis situations.</p>
+      <p>We specialize in nationwide rapid deployment, ensuring comfort and compliance for families in need.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h3>
+      <div class="space-y-6 max-w-3xl mx-auto">
+        <div>
+          <h4 class="font-semibold">How quickly can housing be arranged?</h4>
+          <p>Most placements are arranged within 24 to 48 hours.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Are utilities and internet included?</h4>
+          <p>Yes, all units include utilities, Wi-Fi, and basic furnishings.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">About Global Stay Housing</h3>
+      <p class="max-w-3xl mx-auto">We are a national provider of temporary housing solutions for government agencies, insurance adjusters, displaced families, and corporate clients. Our mission is to deliver comfort, consistency, and care through every placement.</p>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16">
-    <div class="max-w-xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-6">Contact Us</h3>
-      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="name" type="text" placeholder="Your name">
-        </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="email" type="email" placeholder="Your email">
-        </div>
-        <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-          <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="message" rows="4" placeholder="Your message"></textarea>
-        </div>
-        <div class="flex items-center justify-between">
-          <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" type="button">
-            Send
-          </button>
-        </div>
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Get in Touch</h3>
+      <form class="max-w-xl mx-auto space-y-6">
+        <input type="text" placeholder="Name" class="w-full border border-gray-300 p-3 rounded" />
+        <input type="email" placeholder="Email" class="w-full border border-gray-300 p-3 rounded" />
+        <textarea rows="4" placeholder="Message" class="w-full border border-gray-300 p-3 rounded"></textarea>
+        <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded">Send Message</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white text-center py-6">
-    <p>&copy; 2025 StayCQU+. All rights reserved.</p>
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Global Stay Housing. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
