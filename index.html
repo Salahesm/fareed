@@ -11,7 +11,7 @@
       scroll-behavior: smooth;
     }
     .hero-bg {
-      background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914');
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
       background-size: cover;
       background-position: center;
     }
@@ -39,16 +39,19 @@
   <header class="bg-white shadow sticky top-0 z-20">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center space-x-2">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Logo" class="h-10">
+        <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="Logo" class="h-10">
         <h1 class="text-2xl font-bold text-red-700">CORPORATE QUARTERS USA</h1>
       </div>
       <nav class="hidden md:flex space-x-6 font-medium">
         <div x-data="{ open: false }" class="relative">
           <button @click="open = !open" class="hover:text-red-600">Locations</button>
-          <div x-show="open" @click.away="open = false" class="absolute bg-white shadow rounded mt-2 p-2 w-40">
+          <div x-show="open" @click.away="open = false" class="absolute bg-white shadow rounded mt-2 p-2 w-48">
             <a href="#locations" class="block px-2 py-1 hover:bg-gray-100">New York</a>
             <a href="#locations" class="block px-2 py-1 hover:bg-gray-100">California</a>
             <a href="#locations" class="block px-2 py-1 hover:bg-gray-100">Texas</a>
+            <a href="#locations" class="block px-2 py-1 hover:bg-gray-100">Florida</a>
+            <a href="#locations" class="block px-2 py-1 hover:bg-gray-100">Illinois</a>
+            <a href="#locations" class="block px-2 py-1 hover:bg-gray-100">Georgia</a>
           </div>
         </div>
         <div x-data="{ open: false }" class="relative">
@@ -60,7 +63,6 @@
             <a href="#housing" class="block px-2 py-1 hover:bg-gray-100">Short Stays</a>
           </div>
         </div>
-        <a href="#fema" class="hover:text-red-600">FEMA FLEXIBLE<sup>™</sup></a>
         <a href="#faq" class="hover:text-red-600">FAQs</a>
         <a href="#about" class="hover:text-red-600">About</a>
         <a href="#" class="hover:text-red-600">Blog</a>
@@ -71,10 +73,27 @@
 
   <!-- Hero Slider Section -->
   <section class="hero-bg h-[80vh] flex items-center justify-center text-center relative">
-    <div class="bg-white bg-opacity-70 px-10 py-6 rounded shadow">
-      <h2 class="text-3xl font-bold text-gray-800 mb-2">FLEXIBLE GOVERNMENT & CORPORATE LODGING</h2>
-      <p class="text-gray-700">Comfortable. Customizable. Convenient.</p>
+    <div class="bg-white bg-opacity-80 px-10 py-6 rounded shadow-lg">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Luxury Furnished Housing Nationwide</h2>
+      <p class="text-gray-700 text-lg">Fully equipped housing for relocation, government, and corporate needs.</p>
+      <img src="https://images.unsplash.com/photo-1600585154207-5c4bfa6bfa53" alt="Visual Living" class="rounded mt-4 shadow-lg w-full max-w-lg mx-auto">
     </div>
   </section>
 
-  <!-- Continue with rest of content from previous version... -->
+  <!-- Reservation Section -->
+  <section id="reservation" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-xl">
+      <h3 class="text-3xl font-bold text-center mb-6">Request a Reservation</h3>
+      <form action="https://formsubmit.co/salahsmaeili71@gmail.com" method="POST" class="space-y-4 bg-white p-6 rounded shadow">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
+        <input type="text" name="location" placeholder="Preferred Location" required class="w-full p-3 border rounded" />
+        <textarea name="message" rows="4" placeholder="Additional Details" class="w-full p-3 border rounded"></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit" class="bg-red-600 text-white font-bold py-2 px-6 rounded hover:bg-red-700">Submit</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
